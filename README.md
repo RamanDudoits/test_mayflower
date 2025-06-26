@@ -44,16 +44,13 @@ cd project
 
 ```bash
 cp .env.example .env
-# Открываем .env и меняем DB_HOST, DB_DATABASE, DB_USERNAME, DB_PASSWORD, и т.д. (при необходимости)
 ```
 
 ### 2.4 Установка зависимостей
 
 ```bash
-app composer install
-php artisan octane:install
+composer install
 ```
- выбрать swoole
 
 ### 2.5 Запустить Docker-контейнеры
 
@@ -150,22 +147,16 @@ cd project
 cp .env.example .env
 ```
 
+**Установка зависимостей:**
+
+```bash
+composer install
+```
+
 **Запустить контейнеры:**
 
 ```bash
 docker-compose up -d
-```
-
-**Установка зависимостей:**
-
-```bash
-docker-compose exec app composer install
-```
-
-**Выполнить миграции:**
-
-```bash
-docker-compose exec app php artisan migrate
 ```
 
 Откройте в браузере `http://localhost:8000/api/v1/stats`.
