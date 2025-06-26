@@ -6,7 +6,7 @@
 /storage/*.key
 /storage/pail
 /vendor
-.env
+../test_mayflower/vendor/.env
 .env.backup
 .env.production
 .phpactor.json

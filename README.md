@@ -47,22 +47,18 @@ cp .env.example .env
 # Открываем .env и меняем DB_HOST, DB_DATABASE, DB_USERNAME, DB_PASSWORD, и т.д. (при необходимости)
 ```
 
-### 2.4 Запустить Docker-контейнеры
+### 2.4 Установка зависимостей
+
+```bash
+app composer install
+php artisan octane:install
+```
+ выбрать swoole
+
+### 2.5 Запустить Docker-контейнеры
 
 ```bash
 docker-compose up -d
-```
-
-### 2.5 Установка зависимостей
-
-```bash
-docker-compose exec app composer install
-```
-
-### 2.6 Выполнить миграции
-
-```bash
-docker-compose exec app php artisan migrate
 ```
 
 ---
